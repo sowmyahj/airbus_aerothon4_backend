@@ -20,4 +20,4 @@ app.use('/',router)
 app.get("/", (req, res) => {
     res.send("Hello World");
 });
-app.listen(1080,()=>console.log("Server listening at port 1080"));
+app.listen(3002,()=>console.log("Server listening at port 3002"));
