@@ -1,0 +1,14 @@
+.App-header {
+  background-color: #0a2b61;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.App-form {
+  margin: 100px;
+  padding: 50px;
+}
