@@ -29,8 +29,7 @@
    ```
    # Getting started with django
    Migrate to the root folder, perform the above steps.
-   Then to migrate Data Model to database
-   Run the Python script: 
+   Then to migrate Data Model to database, run the Python script: 
    ```python
    python manage.py makemigrations tutorials
    python manage.py migrate tutorials
