@@ -1,6 +1,6 @@
 # Pre-requisites
 
-Install [Node.js] (https://nodejs.dev/)
+Install [Node.js](https://nodejs.dev/)
 
 ### `npm install`
 
