@@ -1,6 +1,6 @@
 # Pre-requisites
 
-Install [Node.js](https://nodejs.dev/)
+Install [Node.js] (https://nodejs.dev/)
 
 ### `npm install`
 
@@ -18,7 +18,7 @@ In the project directory, you can run:
 
 Runs the app in the development mode.\
 Open [http://localhost:3001](http://localhost:3001) to view it in your browser. \
-Login page is diplayed. Enter default values username: "admin" and password: "admin" for successful authentication.
+Login page is diplayed. Enter default values username: "admin" and password: "admin" for successful authentication. On loggin in, all the notes(if any) are fetched. New notes can be created, edited and deleted.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
