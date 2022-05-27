@@ -52,7 +52,7 @@ def tutorial_notes(request):
 @api_view(['POST'])
 def tutorial_notes_add(request):
     
-    return JsonResponse({'response': {'done':False,'notes':'NOT SUPPORTED'}})   
+    return JsonResponse({'response': {'done':False,'note':'NOT SUPPORTED'}})   
 
 
     
