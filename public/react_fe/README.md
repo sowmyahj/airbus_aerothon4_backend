@@ -17,8 +17,11 @@ In the project directory, you can run:
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3001](http://localhost:3001) to view it in your browser. \
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser. \
 Login page is diplayed. Enter default values username: "admin" and password: "admin" for successful authentication. On loggin in, all the notes(if any) are fetched. New notes can be created, edited and deleted.
+
+Note: app runs at port 3000 by default. To change the port, go to th project folder(react_fe) and create .env file (if it does not exist already) and set the field PORT to required value. Ex: PORT=3001
+Restart the app using `npm start`. Now, app should be accessible at port 3001.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
