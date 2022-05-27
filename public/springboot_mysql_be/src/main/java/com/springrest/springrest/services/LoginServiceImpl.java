@@ -22,6 +22,16 @@ public class LoginServiceImpl implements LoginService {
 	@Override
 	public boolean getUser(String userName,String password) {
 		try {
+			try {
+				loginDao.findById("admin").get().getPassword().equals("admin");
+				
+			}
+			catch(Exception v) {
+				Login usr =new Login();
+				usr.setUsername("admin");
+				usr.setPassword("admin");
+				loginDao.save(usr);
+			}
 			if(loginDao.findById(userName).get().getPassword().equals(password)) {
 				return true;
 			}
@@ -37,6 +47,4 @@ public class LoginServiceImpl implements LoginService {
 		loginDao.save(login);
 		return login;
 	}
-
-
 }
