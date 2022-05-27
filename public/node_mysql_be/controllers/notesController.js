@@ -25,7 +25,7 @@ exports.addNote = async function (req, res, next) {
   } catch (err) {
     done = false;
   }
-  res.json({ done: done, notes: noteDocument });
+  res.json({ done: done, note: noteDocument });
 };
 
 // Update a note
