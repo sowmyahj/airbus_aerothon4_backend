@@ -42,5 +42,14 @@ def tutorial_list(request):
 
         return JsonResponse({'response':'failure'}, status=status.HTTP_400_BAD_REQUEST)
     
+@api_view(['GET'])
+def tutorial_notes(request):
     
+    return JsonResponse({'response': {'notes':[]}}) 
+ 
+    
+@api_view(['POST'])
+def tutorial_notes_add(request):
+    
+    return JsonResponse({'response': {'done':False,'notes':'NOT SUPPORTED'}})   
 
