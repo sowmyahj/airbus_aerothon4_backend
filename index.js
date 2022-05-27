@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 var cors = require("cors");
 var zip = require("express-easy-zip");
-const port = process.env.port || 3002;
+const port = process.env.PORT || 3002;
 
 const router = require("./routes/router");
 
