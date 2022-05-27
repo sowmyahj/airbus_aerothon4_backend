@@ -1,0 +1,10 @@
+<div *ngIf="!note.updating" class="note">
+    <span *ngIf="!note.updating">{{note.msg}}</span>
+    <div class="buttons">
+        <button class="edit_button" (click)="onUpdate(note)">Update</button>
+        <button class="delete_button" (click)="onDelete(note)">Delete</button>
+    </div>
+</div>
+<div *ngIf="note.updating" class="note updating">
+    <input *ngIf="note.updating" type="text" [value]="note.msg" #d (keyup.enter)="doneUpdating(note,d)" />
+</div>
