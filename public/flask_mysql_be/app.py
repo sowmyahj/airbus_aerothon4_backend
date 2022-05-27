@@ -5,8 +5,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS, cross_origin
  
 app = Flask(__name__)
-app.debug = True
 cors = CORS(app)
+app.debug = True
  
 # adding configuration for using a sqlite database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -22,7 +22,7 @@ class Note(db.Model):
         return "Note(id={}, value={})".format(self.id, self.value)
 
 
-
+db.create_all()
 # print(Note.select()
 
 @app.route("/api/notes/")
