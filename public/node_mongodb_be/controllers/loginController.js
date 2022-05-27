@@ -1,4 +1,3 @@
-let express = require("express");
 let Login = require("../models/login");
 
 exports.authenticate = function (req, res, next) {
