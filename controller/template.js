@@ -2,23 +2,20 @@ exports.fetchProj = async (req, res) => {
   const projName = req.params.projectName;
   const fe = req.params.frontEnd;
   const be = req.params.backEnd;
+  const db = req.params.db;
 
-  let dirPathFe = null;
-  let dirPathBe = null;
+  const README_FILE = "README.md";
 
-  if (fe === "react") dirPathFe = __dirname + "/../public/react/react-app";
-  if (be === "node") dirPathBe = __dirname + "/../public/node";
+  let dirPathFe = __dirname + "/../public/" + fe + "_fe";
+  let dirPathBe = __dirname + "/../public/" + be + "_" + db + "_be";
+  let dirPathREADME = __dirname + "/../public/" + README_FILE;
 
-  if (be && fe) {
+  try {
     await res.zip({
       files: [
         {
-          // content: 'This is a test string',
-          // name: 'test-file',
-          // mode: 0755,
-          // comment: 'comment-for-the-file - test file',
-          // date: new Date(),
-          // type: 'file'
+          path: dirPathREADME,
+          name: README_FILE,
         },
         {
           path: dirPathFe,
@@ -26,12 +23,12 @@ exports.fetchProj = async (req, res) => {
         },
         {
           path: dirPathBe,
-          name: `${be}_be`,
+          name: `${be}_${db}_be`,
         },
       ],
       filename: `${projName}.zip`,
     });
-  } else {
+  } catch (error) {
     res.status(404).send("Invalid input.");
   }
 };
