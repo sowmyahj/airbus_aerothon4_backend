@@ -22,4 +22,4 @@ In the back-end project directory(XXX_be), you can run:
 ### `npm start`
 
 Starts the server.
-Open [http://localhost:3002](http://localhost:3002) to verify the server is up and running.
+Open [http://localhost:3002](http://localhost:3002) to verify that the server is up and running.
