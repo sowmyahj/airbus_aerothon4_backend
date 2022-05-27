@@ -22,7 +22,7 @@ exports.addNote = function (req, res, next) {
     if (err) {
       done = false;
     }
-    res.json({ done: done, notes: noteDocument });
+    res.json({ done: done, note: noteDocument });
   });
 };
 

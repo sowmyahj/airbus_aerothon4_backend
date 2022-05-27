@@ -75,7 +75,7 @@ function NoteInputForm(props) {
     let result = await res.json();
     if (result.done) {
       props.addNoteToList(result.notes);
-    } else if (result.notes === "NOT SUPPORTED") {
+    } else if (result.note === "NOT SUPPORTED") {
       alert(
         "Backend does not support Notes app. Try with a different backend."
       );
