@@ -1,4 +1,4 @@
-let loginRender = false;
+let loginRender = true;
 const form = document.querySelector('form');
 const notesPage = document.querySelector(".container");
 const noteInput = document.querySelector("#note");
