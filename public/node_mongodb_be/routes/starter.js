@@ -10,6 +10,9 @@ router.post("/login", login_controller.authenticate);
 // GET - lists all the notes
 router.get("/notes", notes_controller.getNotes);
 
+// GET - lists all the notes
+router.get("/notes/", notes_controller.getNotes);
+
 //POST - Add a note
 router.post("/notes/add", notes_controller.addNote);
 
