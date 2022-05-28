@@ -33,6 +33,14 @@ def showNotes():
         notes.append({"id":str(cur.id), "value":cur.value})
     return {"notes":notes}
 
+@app.route("/api/notes")
+def showNotes2():
+    curs =  Note.query.all()
+    notes = []
+    for cur in curs:
+        notes.append({"id":str(cur.id), "value":cur.value})
+    return {"notes":notes}
+
 @app.route("/api/login", methods=["POST"])
 def login():
     dict = request.get_json()
